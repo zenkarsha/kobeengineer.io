@@ -1,0 +1,60 @@
+<form class="form-horizontal">
+  <fieldset>
+    <div class="page-header">
+      <label class="control-label">
+        發文內容
+      </label>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <textarea class="form-control" id="message" name="message" placeholder="你今天都在靠北些什麼？" maxlength="1024" rows="5"></textarea>
+        <br/>
+        <div class="image-block">
+          <label class="control-label">
+            附加圖片
+          </label>
+          <button id="image-upload-button" type="button" class="btn btn-warning">
+            按此上傳圖片
+          </button>
+          <input type="file" id="image" name="image" class="hidden" value="" />
+          <input type="hidden" id="image-url" name="image-url" />
+          <br />
+          <div id="upload-image-preview" class="jumbotron hidden">
+            <span id="image-uploading" class="hidden">上傳中...</span>
+            <img src="" class="img-responsive hidden" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-header">
+      <label class="control-label">
+        發文模式
+      </label>
+    </div>
+
+    {% include submit-form-modes.html %}
+    {% include submit-form-text-image-options.html %}
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="preview-block hidden">
+          <div class="jumbotron text-center">
+            <span class="label label-success preview-label">Preview</span>
+            <div id="preview-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      {% include submit-form-license-and-privacy.html %}
+
+      <div class="form-group">
+        <button id="submit" type="button" class="btn btn-success btn-lg btn-block">
+          送出匿名發文
+        </button>
+      </div>
+    </div>
+  </fieldset>
+</form>

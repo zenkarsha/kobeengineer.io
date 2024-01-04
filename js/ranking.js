@@ -1,0 +1,1 @@
+window.CURRENT_PAGE=1,window.LAST_PAGE=void 0,$(function(){});

@@ -1,0 +1,27 @@
+#preview-image.click-to-refresh
+  position relative
+  cursor pointer
+  &:after
+    content "Click to Refresh"
+    display block
+    color white
+    font-weight bold
+    position absolute
+    width calc(100% + 28px)
+    height auto
+    left -15px
+    top 50%
+    -webkit-transform translateY(-50%)
+    -ms-transform translateY(-50%)
+    transform translateY(-50%)
+    cursor pointer
+
+  &:before
+    content ""
+    position absolute
+    width calc(100% + 28px)
+    height calc(100% + 18px)
+    left -15px
+    top -9px
+    background rgba(0,0,0,.7)
+    cursor pointer

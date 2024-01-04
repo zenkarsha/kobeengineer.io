@@ -1,0 +1,24 @@
+<div class="col-md-6 text-image-options-block hidden">
+  <div class="form-group">
+    <div class="form-inline">
+      <label class="control-label">
+        配色
+      </label>
+      <select name="color" id="color" class="form-control">
+        @foreach ($colors as $color)
+          <option value="{{ $color->id }}" @if ($color->id == '13') selected="selected" @endif>{{ $color->name }}</option>
+        @endforeach
+      </select><br>
+      <label class="control-label">
+        字體
+      </label>
+      <select name="font" id="font" class="form-control">
+        @foreach ($fonts as $font)
+          @if ($font->hide == 0)
+            <option value="{{ $font->id }}">{{ $font->name }}</option>
+          @endif
+        @endforeach
+      </select>
+    </div>
+  </div>
+</div>

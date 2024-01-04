@@ -1,0 +1,36 @@
+---
+layout: default
+additional_script  :
+  - /js/home.js
+---
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    {% include hero.html %}
+
+    <div class="jumbotron text-center hero">
+      <br />
+      [昨日累計] <span id="yesterday_count">...</span>
+      [今日累計] <span id="today_count">...</span><br />
+      [發文成功率] <span id="success_rate">...</span><br />
+      <br />
+    </div>
+
+    <div class="text-center">
+      <div class="alert alert-danger">
+        第一次發文嗎？請先閱讀 <a href="http://bit.ly/新手指南" target="_blank"><kbd>新手指南</kbd></a>
+      </div>
+    </div>
+
+    {% include submit-form.html %}
+
+    <br />
+    <div class="text-center">
+      <div class="alert alert-warning">
+        免責聲明：本網站是以實時上傳發文的方式運作，本站對所有發文的真實性、完整性及立場等，不負任何法律責任。而一切發文內容只代表發文者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。發文者擁有在本站張貼的發文。由於本站是受到「實時發表」運作方式所規限，故不能完全監查所有即時發文，若讀者發現有留言出現問題，請聯絡我們。本站有權刪除任何內容及拒絕任何人士發文，同時亦有不刪除發文的權力。切勿撰寫粗言穢語、毀謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。
+      </div>
+    </div>
+
+  </div>
+</div>

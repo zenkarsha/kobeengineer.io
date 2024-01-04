@@ -1,0 +1,29 @@
+<div class="form-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      發文守則
+    </div>
+    <div class="panel-body">
+      {% if site.license %}
+        {% for item in site.license %}
+          {{ item }}<br />
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      隱私權政策
+    </div>
+    <div class="panel-body">
+      <textarea class="form-control" rows="5" style="color: #000" readonly>{{ site.privacy_policy }}</textarea>
+    </div>
+  </div>
+  <div class="checkbox">
+    <input id="accept-license" name="accept-license" type="checkbox" class="css-checkbox">
+    <label class="css-label" for="accept-license">
+      我同意並已詳細閱讀使用條款及本站隱私權政策
+    </label>
+  </div>
+</div>
